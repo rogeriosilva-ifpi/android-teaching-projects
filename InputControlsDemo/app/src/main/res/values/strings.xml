@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">AppCelular</string>
+    <string name="btn_gravar">Gravar</string>
+    <string name="novo_celular">Novo Celular</string>
+    <string name="digite_a_marca">Digite a marca...</string>
+    <string name="digite_o_modelo">Digite o modelo...</string>
+    <string name="processador_64bits">Processador: </string>
+    <string name="opcionais">Opcionais:</string>
+    <string name="camera_frontal">Camera Frontal</string>
+    <string name="flash_frontal">Flash Frontal</string>
+    <string name="leitor_digital">Leitor Digital</string>
+    <string name="dualsim">  DualSIM: </string>
+    <string name="_1gb">1Gb</string>
+    <string name="_2gb">2Gb</string>
+    <string name="_3gb">3Gb</string>
+    <string name="memoria_ram">Memoria RAM</string>
+    <string name="armazenamento_interno">Armazenamento Interno</string>
+    <string name="celular_cadastrado">Celular Cadastrado</string>
+    <string name="marca_e_modelo">Marca e Modelo:</string>
+
+    <string-array name="armazenamentos">
+        <item>8Gb</item>
+        <item>16Gb</item>
+        <item>32Gb</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="codes.wise.helloandroid.MainActivity">
+
+    <Button
+        android:id="@+id/btn_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="mostrarToast"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:text="@string/str_toast" />
+
+    <TextView
+        android:id="@+id/txt_numero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="160sp"
+        android:textAlignment="center"
+        android:background="#FFFF00"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/str_numero" />
+
+    <Button
+        android:id="@+id/btn_contador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_contador"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:onClick="aumentarNumero"/>
+
+</LinearLayout>

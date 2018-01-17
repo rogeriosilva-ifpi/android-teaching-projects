@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/actionmode_item01"
+        android:title="Action 01"
+        android:icon="@drawable/ic_announcement_black_24dp"
+        />
+
+    <item
+        android:id="@+id/actionmode_item02"
+        android:title="Action 02"
+        android:icon="@drawable/ic_announcement_black_24dp"
+        />
+
+</menu>

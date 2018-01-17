@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloIntent</string>
+    <string name="btn_ligar">Ligar Maria</string>
+    <string name="btn_site">Globo.com</string>
+</resources>

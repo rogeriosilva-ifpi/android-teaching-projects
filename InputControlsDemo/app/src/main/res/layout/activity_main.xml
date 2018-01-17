@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rogermac.inputcontrols.MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:text="@string/novo_celular"
+         />
+
+    <EditText
+        android:id="@+id/edit_marca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/digite_a_marca"/>
+
+    <EditText
+        android:id="@+id/edit_modelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/digite_o_modelo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/processador_64bits"/>
+
+        <ToggleButton
+            android:id="@+id/btn_tg_processador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="64bits"
+            android:textOff="32bits"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dualsim"/>
+
+        <Switch
+            android:id="@+id/sw_dualsim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="dualsimClick"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/armazenamento_interno"/>
+
+        <Spinner
+            android:id="@+id/sp_armazenamento_interno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/armazenamentos"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/memoria_ram"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_memoria_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1gb"
+            android:onClick="memoriaRadioClick"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_memoria_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_2gb"
+            android:onClick="memoriaRadioClick"/>
+
+        <RadioButton
+            android:id="@+id/rb_memoria_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_3gb"
+            android:onClick="memoriaRadioClick"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/opcionais"/>
+
+    <CheckBox
+        android:id="@+id/cb_camera_frontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/camera_frontal"
+        android:onClick="opcionaisCheckboxClick"/>
+
+    <CheckBox
+        android:id="@+id/cb_flash_frontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/flash_frontal"
+        android:onClick="opcionaisCheckboxClick"/>
+
+    <CheckBox
+        android:id="@+id/cb_leitor_digital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/leitor_digital"
+        android:onClick="opcionaisCheckboxClick"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_gravar"
+        android:onClick="salvarCelularClick"/>
+
+
+</LinearLayout>

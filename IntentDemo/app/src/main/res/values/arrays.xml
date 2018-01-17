@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="carros">
+        <item>Novo Palio</item>
+        <item>Sandeiro</item>
+        <item>Fiat Toro</item>
+        <item>Etios</item>
+        <item>Corolla</item>
+    </string-array>
+
+    <string-array name="sistemas">
+        <item>iOS</item>
+        <item>Android</item>
+        <item>WindowsMobile</item>
+        <item>BlackBerry</item>
+        <item>Ubuntu</item>
+        <item>Windows 13</item>
+        <item>iOS</item>
+        <item>Android</item>
+        <item>WindowsMobile</item>
+        <item>BlackBerry</item>
+        <item>Ubuntu</item>
+        <item>Windows 13</item>
+        <item>iOS</item>
+        <item>Android</item>
+        <item>WindowsMobile</item>
+        <item>BlackBerry</item>
+        <item>Ubuntu</item>
+        <item>Windows 13</item>
+    </string-array>
+</resources>

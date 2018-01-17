@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.rogermac.hellomenus.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:titleTextColor="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/AlertDialog.AppCompat.Light"/>
+
+
+    <Button
+        android:id="@+id/btn_ctx_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/teste"/>
+
+
+    <Button
+        android:id="@+id/btn_ctx_menu2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/teste_02"/>
+
+    <Button
+        android:id="@+id/btn_ctx_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/teste_03"/>
+
+    <Button
+        android:id="@+id/btn_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/popup"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/ligar" android:title="Ligar para ..."
+        app:showAsAction="always"
+        android:icon="@drawable/phone">
+
+    </item>
+
+    <item android:id="@+id/openurl" android:title="Abrir site..."
+        android:icon="@drawable/navegador" app:showAsAction="never"></item>
+
+    <item android:id="@+id/hello" android:title="Hello Cars"></item>
+
+    <item android:id="@+id/hello_notication" android:title="Hello Notify"/>
+
+    <item android:id="@+id/so_mobile" android:title="SO Mobile"></item>
+
+</menu>

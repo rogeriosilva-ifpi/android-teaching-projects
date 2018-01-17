@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MeuTema" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/md_cyan_700</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/md_cyan_100</item>
+    </style>
+
+    <style name="Negrito">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextoPequeno" parent="Negrito">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/md_red_500</item>
+    </style>
+
+    <style name="TextoMedio" parent="Negrito">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="TextoMedio.Azul">
+        <item name="android:textColor">@android:color/holo_blue_bright</item>
+    </style>
+
+    <style name="TextoGrande" parent="Negrito">
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <style name="TextoGrande.Purple">
+        <item name="android:textColor">@color/md_purple_500</item>
+    </style>
+
+    <style name="TextVerdeXG">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/colorVerde</item>
+    </style>
+
+    <style name="TextoLaranja">
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/colorLaranja</item>
+    </style>
+
+</resources>
+
+
+
+
+
+
+
+
+
+
+

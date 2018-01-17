@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HelloMenus</string>
+    <string name="favoritar">Favoritar</string>
+    <string name="teste">ContextMenu</string>
+    <string name="teste_02">ContextoMenu 2</string>
+    <string name="teste_03">Contextual ActionBar</string>
+    <string name="configura_es">Configurações</string>
+    <string name="popup">Popup</string>
+    <string name="popupitem01">PopupItem01</string>
+    <string name="popupitem02">PopupItem02</string>
+</resources>
