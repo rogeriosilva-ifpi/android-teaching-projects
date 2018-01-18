@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ContadoApp</string>
+    <string name="digite_um_n_mero">Digite um número</string>
+    <string name="diminuir">Diminuir</string>
+    <string name="aumentar">Aumentar</string>
+    <string name="digite_incremento">Digite um incremento</string>
+</resources>
