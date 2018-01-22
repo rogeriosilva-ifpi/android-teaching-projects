@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">HelloObjectBox</string>
+    <string name="modelo_celular_ex_moto_g4">Modelo celular. Ex.: Moto G4</string>
+    <string name="fabricante_ex_lenovo">Fabricante. Ex.: Lenovo</string>
+    <string name="salvar">Salvar</string>
+    <string name="ver_lista">Ver lista</string>
+    <string name="novo_celular">Novo Celular</string>
 </resources>
