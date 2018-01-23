@@ -38,7 +38,7 @@ public class ListaCelularActivity extends AppCompatActivity {
         super.onResume();
 
         List<Celular> celulares = celularBox.getAll();
-        CelularRVAdapter adapter = new CelularRVAdapter(this, celulares);
+        CelularRVAdapter adapter = new CelularRVAdapter(this, celulares, celularBox);
 
         rvCelulares.setAdapter(adapter);
         rvCelulares.setLayoutManager(new LinearLayoutManager(this));
