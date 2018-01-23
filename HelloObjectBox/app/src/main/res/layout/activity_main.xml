@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.rogermac.helloobjectbox.MainActivity">
+    tools:context="com.example.rogermac.helloobjectbox.FormularioCelularActivity">
 
 
     <EditText
@@ -33,7 +33,6 @@
         android:layout_height="wrap_content"
         android:text="@string/ver_lista"
         android:onClick="verLista"/>
-
 
 
 </LinearLayout>

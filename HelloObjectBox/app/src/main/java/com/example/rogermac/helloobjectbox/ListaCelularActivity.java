@@ -1,4 +1,4 @@
-package com.example.rogermac.helloobjectbox.modelo;
+package com.example.rogermac.helloobjectbox;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,16 +7,15 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.example.rogermac.helloobjectbox.MainActivity;
-import com.example.rogermac.helloobjectbox.R;
 import com.example.rogermac.helloobjectbox.adapters.CelularRVAdapter;
 import com.example.rogermac.helloobjectbox.dal.App;
+import com.example.rogermac.helloobjectbox.modelo.Celular;
 
 import java.util.List;
 
 import io.objectbox.Box;
 
-public class SegundaActivity extends AppCompatActivity {
+public class ListaCelularActivity extends AppCompatActivity {
 
     Box<Celular> celularBox;
     RecyclerView rvCelulares;
@@ -24,7 +23,8 @@ public class SegundaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_segunda);
+        setContentView(R.layout.activity_lista_celular);
+
 
         celularBox = ((App) getApplication()).getBoxStore().boxFor(Celular.class);
 
@@ -46,6 +46,6 @@ public class SegundaActivity extends AppCompatActivity {
     }
 
     public void novoCelular(View view) {
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, FormularioCelularActivity.class));
     }
 }

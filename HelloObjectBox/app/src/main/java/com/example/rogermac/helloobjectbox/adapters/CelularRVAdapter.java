@@ -35,10 +35,10 @@ public class CelularRVAdapter extends RecyclerView.Adapter<CelularRVAdapter.View
         public ViewHolder(View itemView) {
             super(itemView);
 
-
             tvCelularModelo = itemView.findViewById(R.id.tv_celular_modelo);
             tvCelularMarca = itemView.findViewById(R.id.tv_celular_marca);
         }
+
     }
 
 

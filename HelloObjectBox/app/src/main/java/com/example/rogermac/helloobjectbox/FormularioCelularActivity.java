@@ -8,13 +8,10 @@ import android.widget.EditText;
 
 import com.example.rogermac.helloobjectbox.dal.App;
 import com.example.rogermac.helloobjectbox.modelo.Celular;
-import com.example.rogermac.helloobjectbox.modelo.MyObjectBox;
-import com.example.rogermac.helloobjectbox.modelo.SegundaActivity;
 
 import io.objectbox.Box;
-import io.objectbox.BoxStore;
 
-public class MainActivity extends AppCompatActivity {
+public class FormularioCelularActivity extends AppCompatActivity {
     private EditText editModelo, editMarca;
 
     Box<Celular> celularBox;
@@ -48,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void verLista(View view) {
         //ir para a lista
-        Intent intent = new Intent(this, SegundaActivity.class);
+        Intent intent = new Intent(this, ListaCelularActivity.class);
         startActivity(intent);
     }
 }

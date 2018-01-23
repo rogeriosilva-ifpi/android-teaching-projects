@@ -24,6 +24,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         boxStore = MyObjectBox.builder().androidContext(App.this).build();
+
         if (BuildConfig.DEBUG) {
             new AndroidObjectBrowser(boxStore).start(this);
         }
