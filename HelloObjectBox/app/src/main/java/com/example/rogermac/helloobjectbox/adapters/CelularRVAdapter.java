@@ -1,6 +1,7 @@
 package com.example.rogermac.helloobjectbox.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.example.rogermac.helloobjectbox.FormularioCelularActivity;
 import com.example.rogermac.helloobjectbox.R;
 import com.example.rogermac.helloobjectbox.modelo.Celular;
 
@@ -27,9 +29,9 @@ public class CelularRVAdapter extends RecyclerView.Adapter<CelularRVAdapter.View
     private List<Celular> celulares;
     private Box<Celular> celularBox;
 
-    public CelularRVAdapter(Context context, List<Celular> dataset, Box<Celular> celularBox) {
+    public CelularRVAdapter(Context context, List<Celular> celulares, Box<Celular> celularBox) {
         this.context = context;
-        this.celulares = dataset;
+        this.celulares = celulares;
         this.celularBox = celularBox;
     }
 
@@ -113,6 +115,15 @@ public class CelularRVAdapter extends RecyclerView.Adapter<CelularRVAdapter.View
     }
 
     private void acaoEditar(View view, Celular celular, int position) {
+        //Enviar o id do Celular selecionado
+        Intent intent = new Intent(context, FormularioCelularActivity.class);
+        intent.putExtra("idCelular", celular.getId());
+
+        //Iniciar o formulario
+        context.startActivity(intent);
+
+        //Avisar aa intent que um item mudou.
+        notifyItemChanged(position);
 
     }
 }
