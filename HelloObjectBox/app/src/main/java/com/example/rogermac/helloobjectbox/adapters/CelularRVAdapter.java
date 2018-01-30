@@ -1,6 +1,8 @@
 package com.example.rogermac.helloobjectbox.adapters;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.rogermac.helloobjectbox.FormularioCelularActivity;
 import com.example.rogermac.helloobjectbox.R;
@@ -55,17 +58,20 @@ public class CelularRVAdapter extends RecyclerView.Adapter<CelularRVAdapter.View
 
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.item_celular_rv, parent, false);
-        return new ViewHolder(view);
+
+        ViewHolder viewHolder = new ViewHolder(view);
+
+        return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder viewHolder, int position) {
         Celular celular = this.celulares.get(position);
 
-        holder.tvCelularModelo.setText(celular.getModelo());
-        holder.tvCelularMarca.setText(celular.getMarca());
+        viewHolder.tvCelularModelo.setText(celular.getModelo());
+        viewHolder.tvCelularMarca.setText(celular.getMarca());
 
-        configurarClick(holder.itemView, celular, position);
+        configurarClick(viewHolder.itemView, celular, position);
 
     }
 
@@ -102,16 +108,29 @@ public class CelularRVAdapter extends RecyclerView.Adapter<CelularRVAdapter.View
     }
 
     private void acaoRemover(View view, Celular celular, int position) {
-        //remover da lista do recyclerView
-        this.celulares.remove(celular);
-        //remover do BD
-        this.celularBox.remove(celular);
 
-        //Reorganizar a lista
-        notifyItemRemoved(position);
-        notifyItemRangeChanged(position, getItemCount());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this.context);
 
-        Snackbar.make(view, "Celular removido: " + celular.getModelo(), Snackbar.LENGTH_SHORT).show();
+        builder.setTitle("App Celular");
+        builder.setMessage("Confirma a remoção de: " + celular.getModelo()+ "?");
+        builder.setPositiveButton("SIM", (dialog, which) -> {
+            //remover da lista do recyclerView
+            this.celulares.remove(celular);
+            //remover do BD
+            this.celularBox.remove(celular);
+
+            //Reorganizar a lista
+            notifyItemRemoved(position);
+            notifyItemRangeChanged(position, getItemCount());
+
+            Snackbar.make(view, "Celular removido: " + celular.getModelo(), Snackbar.LENGTH_SHORT).show();
+        });
+        builder.setNegativeButton("NÃO", (dialog, which) -> {
+            Toast.makeText(context, "Ok", Toast.LENGTH_SHORT).show();
+        });
+
+        builder.create().show();
+
     }
 
     private void acaoEditar(View view, Celular celular, int position) {

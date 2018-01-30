@@ -12,7 +12,8 @@ import com.example.rogermac.helloobjectbox.modelo.Celular;
 import io.objectbox.Box;
 
 public class FormularioCelularActivity extends AppCompatActivity {
-    private EditText editModelo, editMarca;
+    private EditText editModelo;
+    private EditText editMarca;
 
     private Box<Celular> celularBox;
     private Celular celular;
