@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HelloMenuX</string>
+    <string name="pressione_o_botao_para_ganhar_um_milh_o">Pressione o botao para ganhar um milhão</string>
+    <string name="eu_quero">Eu quero!</string>
+    <string name="editar">Editar</string>
+    <string name="excluir">Excluir</string>
+    <string name="eu_n_o_quero">Eu não quero</string>
+    <string name="bestao">Bestao</string>
+    <string name="surpresa">Surpresa</string>
+    <string name="quero_viagem">Quero viagem</string>
+    <string name="quero_uma_pop110">Quero uma POP110</string>
+    <string name="listagem">Listagem</string>
+</resources>

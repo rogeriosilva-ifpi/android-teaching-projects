@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/popup_viagem"
+        android:title="@string/quero_viagem"
+        />
+
+    <item
+        android:id="@+id/popup_pop"
+        android:title="@string/quero_uma_pop110"
+        />
+
+</menu>

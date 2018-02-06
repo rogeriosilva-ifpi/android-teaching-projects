@@ -114,16 +114,13 @@ public class CelularRVAdapter extends RecyclerView.Adapter<CelularRVAdapter.View
         builder.setTitle("App Celular");
         builder.setMessage("Confirma a remoção de: " + celular.getModelo()+ "?");
         builder.setPositiveButton("SIM", (dialog, which) -> {
-            //remover da lista do recyclerView
+            // remover só em caso de "SIM"
             this.celulares.remove(celular);
-            //remover do BD
             this.celularBox.remove(celular);
-
-            //Reorganizar a lista
             notifyItemRemoved(position);
             notifyItemRangeChanged(position, getItemCount());
-
-            Snackbar.make(view, "Celular removido: " + celular.getModelo(), Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(view, "Celular removido: " + celular.getModelo(),
+                    Snackbar.LENGTH_SHORT).show();
         });
         builder.setNegativeButton("NÃO", (dialog, which) -> {
             Toast.makeText(context, "Ok", Toast.LENGTH_SHORT).show();

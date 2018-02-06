@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.rogermac.hellomenux.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pressione_o_botao_para_ganhar_um_milh_o"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btn_eu_quero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:textSize="30sp"
+        android:text="@string/eu_quero"/>
+
+
+    <Button
+        android:id="@+id/btn_nao_eu_quero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:textSize="30sp"
+        android:text="@string/eu_n_o_quero"/>
+
+    <Button
+        android:id="@+id/btn_listagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/listagem"
+        android:onClick="listagem"/>
+
+
+    <Button
+        android:id="@+id/btn_surpresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/surpresa"
+        android:onClick="querSurpresa"/>
+
+</LinearLayout>
