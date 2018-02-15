@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rogermac.hellomenux.ListagemActivity">
+    tools:context="com.example.rogermac.olxcover.ListaAnunciosActivity">
+
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_celulares"
+        android:id="@+id/rv_anuncios"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:background="#E8EAF6"/>
+        android:layout_height="match_parent"/>
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
@@ -21,8 +18,9 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:src="@drawable/ic_add"
-        app:layout_anchor="@id/rv_celulares"
+        app:layout_anchor="@id/rv_anuncios"
         app:layout_anchorGravity="bottom|right|end"
-        />
+        android:onClick="novoAnuncio"/>
+
 
 </android.support.design.widget.CoordinatorLayout>

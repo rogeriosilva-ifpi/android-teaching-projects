@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OLXCover</string>
+    <string name="titulo">Título</string>
+    <string name="preco">Preço</string>
+    <string name="localizacao">Localização</string>
+    <string name="salvar_anuncio">Salvar anúncio</string>
+    <string name="remover">Remover</string>
+</resources>
