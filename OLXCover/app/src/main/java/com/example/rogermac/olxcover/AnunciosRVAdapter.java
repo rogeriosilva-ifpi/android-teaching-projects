@@ -111,4 +111,7 @@ public class AnunciosRVAdapter extends RecyclerView.Adapter<AnunciosRVAdapter.Vi
         }
     }
 
+    public void setAnuncios(List<Anuncio> anuncios) {
+        this.anuncios = anuncios;
+    }
 }

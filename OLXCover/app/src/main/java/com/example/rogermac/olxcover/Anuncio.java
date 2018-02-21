@@ -2,6 +2,7 @@ package com.example.rogermac.olxcover;
 
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
+import io.objectbox.relation.ToOne;
 
 /**
  * Created by rogermac on 15/02/18.
@@ -14,6 +15,7 @@ public class Anuncio {
     private String titulo;
     private double valor;
     private String localizacao;
+    private ToOne<Usuario> dono;
 
     public Anuncio() {
     }
@@ -48,5 +50,13 @@ public class Anuncio {
 
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
+    }
+
+    public ToOne<Usuario> getDono() {
+        return dono;
+    }
+
+    public void setDono(ToOne<Usuario> dono) {
+        this.dono = dono;
     }
 }
