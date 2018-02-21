@@ -5,4 +5,9 @@
     <string name="localizacao">Localização</string>
     <string name="salvar_anuncio">Salvar anúncio</string>
     <string name="remover">Remover</string>
+    <string name="pesquisa">Pesquisa</string>
+    <string name="entrar">Entrar</string>
+    <string name="cadastre_se">Cadastre-se</string>
+    <string name="senha">Senha</string>
+    <string name="e_mail">e-mail</string>
 </resources>

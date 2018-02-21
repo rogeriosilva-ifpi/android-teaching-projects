@@ -10,15 +10,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListaAnunciosActivity">
+        <activity
+            android:name=".ListaAnunciosActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SEARCH" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".FormularioAnuncioActivity"
+        <activity
+            android:name=".FormularioAnuncioActivity"
             android:parentActivityName=".ListaAnunciosActivity" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

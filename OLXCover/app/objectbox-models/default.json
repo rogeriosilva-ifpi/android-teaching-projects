@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:4154115638883375504",
-      "lastPropertyId": "4:7153611358576075793",
+      "lastPropertyId": "5:3384311069735811127",
       "name": "Anuncio",
       "properties": [
         {
@@ -23,13 +23,38 @@
         {
           "id": "4:7153611358576075793",
           "name": "localizacao"
+        },
+        {
+          "id": "5:3384311069735811127",
+          "indexId": "1:9027413902665546502",
+          "name": "donoId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:800940329156874141",
+      "lastPropertyId": "3:3296889469288910893",
+      "name": "Usuario",
+      "properties": [
+        {
+          "id": "1:8221539648928829498",
+          "name": "id"
+        },
+        {
+          "id": "2:4177566158220350847",
+          "name": "email"
+        },
+        {
+          "id": "3:3296889469288910893",
+          "name": "senha"
         }
       ],
       "relations": []
     }
   ],
-  "lastEntityId": "1:4154115638883375504",
-  "lastIndexId": "0:0",
+  "lastEntityId": "2:800940329156874141",
+  "lastIndexId": "1:9027413902665546502",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
   "modelVersion": 4,

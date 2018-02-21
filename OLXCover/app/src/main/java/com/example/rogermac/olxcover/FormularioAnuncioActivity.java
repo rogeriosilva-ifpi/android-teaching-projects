@@ -1,6 +1,7 @@
 package com.example.rogermac.olxcover;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,8 @@ public class FormularioAnuncioActivity extends AppCompatActivity {
     private Anuncio anuncio;
 
     private Box<Anuncio> anuncioBox;
+    private Box<Usuario> usuarioBox;
+    private Usuario usuarioLogado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,8 @@ public class FormularioAnuncioActivity extends AppCompatActivity {
         long anuncioId = intent.getLongExtra("anuncioId", -1);
 
         anuncioBox = ((App)getApplication()).getBoxStore().boxFor(Anuncio.class);
+        usuarioBox = ((App)getApplication()).getBoxStore().boxFor(Usuario.class);
+        usuarioLogado = obterUsuarioLogado();
 
         if (anuncioId == -1){
             anuncio = new Anuncio();
@@ -40,6 +45,12 @@ public class FormularioAnuncioActivity extends AppCompatActivity {
             preencherFormulario(anuncio);
         }
 
+    }
+
+    private Usuario obterUsuarioLogado() {
+        final SharedPreferences preferences = getSharedPreferences("olxcover.file", MODE_PRIVATE);
+        final long id = preferences.getLong("usuarioId", -1);
+        return usuarioBox.get(id);
     }
 
     private void preencherFormulario(Anuncio anuncio) {
@@ -63,6 +74,7 @@ public class FormularioAnuncioActivity extends AppCompatActivity {
         anuncio.setTitulo(titulo);
         anuncio.setValor(preco);
         anuncio.setLocalizacao(localizacao);
+        anuncio.getDono().setTarget(usuarioLogado);
 
         anuncioBox.put(anuncio);
 
