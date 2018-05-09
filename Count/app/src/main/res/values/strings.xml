@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Count</string>
+    <string name="_1">1</string>
+    <string name="aumentar">AUMENTAR</string>
+    <string name="diminuir">DIMINUIR</string>
+    <string name="resetar">RESETAR</string>
+    <string name="rogerio">rogerio da silva</string>
+</resources>
