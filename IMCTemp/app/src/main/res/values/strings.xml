@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">IMCTemp</string>
+    <string name="seu_nome">Seu nome</string>
+    <string name="digite_aqui">Digite aqui</string>
+    <string name="seu_peso">Seu Peso</string>
+    <string name="em_kg">Em kg</string>
+    <string name="sua_altura">Sua Altura</string>
+    <string name="em_metros">Em metros</string>
+    <string name="meu_imc">Meu IMC</string>
+    <string name="ol">Olá</string>
+    <string name="seu_imc">Seu IMC é</string>
+    <string name="sua_situa_o">Sua situação é</string>
+    <string name="rog_rio">Rogério</string>
+    <string name="_39_7">39.7</string>
+    <string name="obesidade_ii">Obesidade II</string>
+</resources>
