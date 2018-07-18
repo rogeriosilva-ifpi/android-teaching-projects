@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloPopupMenu</string>
+    <string name="visualizar">Visualizar</string>
+    <string name="editar">Editar</string>
+</resources>
