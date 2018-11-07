@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/opcao_salvar"
+        android:title="@string/salvar"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/opcao_favorito"
+        android:title="Favorito"
+        android:icon="@drawable/ic_favorito"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/opcao_configuracao"
+        android:title="@string/configura_es" />
+
+    <item android:id="@+id/opcao_toast"
+        android:title="@string/exibir_msg"/>
+
+</menu>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Capital</string>
+    <string name="qual_a_capital">Qual a capital?</string>
+    <string name="pais">Pais:</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="nova_pesquisa">Nova Pesquisa</string>
+    <string name="capital_pesquisada">Capital Pesquisada é ...</string>
+</resources>
