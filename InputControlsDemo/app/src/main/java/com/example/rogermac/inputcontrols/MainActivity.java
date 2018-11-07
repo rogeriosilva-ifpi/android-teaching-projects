@@ -10,12 +10,13 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, RatingBar.OnRatingBarChangeListener{
 
     private static final String TAG = "FormCelular";
     private Celular celular;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private EditText editModelo;
     private ToggleButton btnTgProcessador;
     private Spinner spArmazenamento;
+    private RatingBar rbAvaliacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +35,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         celular = new Celular();
 
         //binding manual
-        editMarca = (EditText) findViewById(R.id.edit_marca);
-        editModelo = (EditText) findViewById(R.id.edit_modelo);
-        btnTgProcessador = (ToggleButton) findViewById(R.id.btn_tg_processador);
-        spArmazenamento = (Spinner) findViewById(R.id.sp_armazenamento_interno);
+        editMarca = findViewById(R.id.edit_marca);
+        editModelo = findViewById(R.id.edit_modelo);
+        btnTgProcessador = findViewById(R.id.btn_tg_processador);
+        spArmazenamento = findViewById(R.id.sp_armazenamento_interno);
+        rbAvaliacao = findViewById(R.id.rb_avaliacao);
 
         spArmazenamento.setOnItemSelectedListener(this);
+        rbAvaliacao.setOnRatingBarChangeListener(this);
     }
 
     public void salvarCelularClick(View view) {
@@ -92,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         RadioButton rbMemoriaClicado = (RadioButton) view;
         boolean marcado = rbMemoriaClicado.isChecked();
 
+
         if (marcado){
            celular.setMemoriaRAM(rbMemoriaClicado.getText().toString());
         }
@@ -107,5 +112,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         //Vazio.
+    }
+
+    @Override
+    public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+
+        if (ratingBar.getId() == rbAvaliacao.getId()){
+            Toast.makeText(this, "Avaliacao: " + rating, Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

@@ -100,6 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_2gb"
+            android:checked="true"
             android:onClick="memoriaRadioClick"/>
 
         <RadioButton
@@ -137,11 +138,29 @@
         android:text="@string/leitor_digital"
         android:onClick="opcionaisCheckboxClick"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avaliação"/>
+
+    <RatingBar
+        android:id="@+id/rb_avaliacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="3.5"
+        android:stepSize="0.5"
+        />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_gravar"
         android:onClick="salvarCelularClick"/>
+
+
+
+
 
 
 </LinearLayout>
