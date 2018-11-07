@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HelloIntent4Result</string>
+    <string name="nota_1">Nota 1</string>
+    <string name="nota_2">Nota 2</string>
+    <string name="calcular">Calcular</string>
+    <string name="peso_nota_1">Peso Nota 1</string>
+    <string name="peso_nota_2">Peso Nota 2</string>
+</resources>
