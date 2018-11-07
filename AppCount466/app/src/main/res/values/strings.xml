@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AppLesson1</string>
+    <string name="conteudo">Durante os meus estudos de Android, sempre tive dificuldade em encontrar bons conteúdos em português sobre desenvolvimento Android, fazendo com que eu tivesse que priorizar a pesquisa apenas em inglês.
+        Entretanto, como sabemos, para quem está começando, já existem diversas barreiras durante o aprendizado, seja pela parte de OO com <i>Java</i> ou os conceitos do framework do <b>Android…</b>\n\n www.outlook.com
+        \n\n <b>Fone: </b> +5586988765676
+        \n\n <b>Email: </b> rogerio.silva@ifpi.edu.br
+        \n\n
+        Agora imagine para quem não tem conhecimento nenhum em inglês…
+
+        Pensando justamente nesse tipo de situação que muitos de nós passamos, eu e mais alguns amigos, decidimos escrever diversos posts/artigos de Android em PT-BR pensando em colaborar com a comunidade brasileira de desenvolvedores Android (principalmente com os iniciantes 😉).
+
+Portanto, a ideia deste post é ser um agregador de conteúdos para desenvolvedores Android, seja iniciante ou avançado!
+    </string>
+    <string name="nome">Rogerio</string>
+    <string name="titulo">Primeiros passos no desenvolvimento com Android</string>
+    <string name="subtitulo">Para quem está começando</string>
+</resources>
