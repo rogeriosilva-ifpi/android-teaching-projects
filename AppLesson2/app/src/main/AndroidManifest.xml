@@ -14,18 +14,24 @@
             android:name=".MsgOutRosaActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".ImplicitIntentActivity" />
-        <activity android:name=".Tela1ObterEmailActivity"></activity>
+        <activity android:name=".Tela1ObterEmailActivity" />
         <activity
             android:name=".Tela2ExibirEmailActivity"
             android:parentActivityName=".Tela1ObterEmailActivity" />
-        <activity android:name=".Tela1ObterNumerosActivity">
+        <activity android:name=".Tela1ObterNumerosActivity" />
+        <activity android:name=".Tela2CalcularMediaActivity" />
+        <activity android:name=".Tela1IMCActivity" />
+        <activity android:name=".Tela2IMCActivity" />
+        <activity android:name=".Tela2LifecycleActivity"></activity>
+        <activity android:name=".Tela3LifecycleActivity" />
+        <activity android:name=".Tela1DOJOActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Tela2CalcularMediaActivity"></activity>
+        <activity android:name=".Tela2calActivity"></activity>
     </application>
 
 </manifest>
