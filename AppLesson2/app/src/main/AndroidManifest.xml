@@ -22,16 +22,18 @@
         <activity android:name=".Tela2CalcularMediaActivity" />
         <activity android:name=".Tela1IMCActivity" />
         <activity android:name=".Tela2IMCActivity" />
-        <activity android:name=".Tela2LifecycleActivity"></activity>
+        <activity android:name=".Tela2LifecycleActivity" />
         <activity android:name=".Tela3LifecycleActivity" />
-        <activity android:name=".Tela1DOJOActivity">
+        <activity android:name=".Tela1DOJOCalActivity"></activity>
+        <activity android:name=".Tela2DOJOCalActivity" />
+        <activity android:name=".Tela1DebugLogActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Tela2calActivity"></activity>
+        <activity android:name=".Tela2DebugLogActivity"></activity>
     </application>
 
 </manifest>

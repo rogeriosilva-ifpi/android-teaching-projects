@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class Tela1DOJOActivity extends AppCompatActivity {
+public class Tela1DOJOCalActivity extends AppCompatActivity {
     EditText editVelocidade;
 
     @Override
@@ -18,7 +18,7 @@ public class Tela1DOJOActivity extends AppCompatActivity {
     }
 
     public void abrir(View view) {
-        Intent it = new Intent(this, Tela2calActivity.class);
+        Intent it = new Intent(this, Tela2DOJOCalActivity.class);
         double velocidade = Double.parseDouble(editVelocidade.getText().toString());
         it.putExtra("velocidade", velocidade);
         startActivity(it);
