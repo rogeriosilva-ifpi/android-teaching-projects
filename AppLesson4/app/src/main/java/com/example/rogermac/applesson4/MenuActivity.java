@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -106,5 +107,33 @@ public class MenuActivity extends AppCompatActivity {
         }
 
         return super.onContextItemSelected(item);
+    }
+
+    public void mostrarPopupMenu(View view) {
+
+        PopupMenu pop = new PopupMenu(this, view);
+
+        pop.getMenuInflater().inflate(R.menu.popup_times, pop.getMenu());
+
+        pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+
+                if (menuItem.getItemId() == R.id.popup_colorir_times){
+                    txtFlamengo.setTextColor(Color.RED);
+                    txtVasco.setTextColor(Color.BLUE);
+                }
+
+                if (menuItem.getItemId() == R.id.popup_cor_padrao_times){
+                    txtFlamengo.setTextColor(Color.BLACK);
+                    txtVasco.setTextColor(Color.BLACK);
+                }
+
+                return false;
+            }
+        });
+
+        pop.show();
+
     }
 }
