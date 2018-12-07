@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/option_colorir"
+        android:title="@string/colorir" />
+    <item
+        android:id="@+id/option_apagar_time"
+        android:title="@string/apagar_time" />
+</menu>

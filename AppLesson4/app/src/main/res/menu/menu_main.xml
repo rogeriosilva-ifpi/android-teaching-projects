@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/option_configuracoes"
+        android:title="@string/configuracoes"/>
+        <!--android:onClick="abrir_configuracoes"-->
+
+
+    <item android:id="@+id/option_favorito"
+        android:title="@string/favorito"
+        android:icon="@drawable/ic_favorito"
+        app:showAsAction="always"
+        />
+    <!--android:onClick="abrir_favoritos"-->
+
+    <item android:id="@+id/opcao_resgatar_vasco"
+        android:title="Resgate do Vasco"/>
+</menu>

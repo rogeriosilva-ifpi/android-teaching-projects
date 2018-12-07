@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppLesson4</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="favorito">Favorito</string>
+    <string name="colorir">Colorir</string>
+    <string name="apagar_time">Apagar time</string>
+</resources>
