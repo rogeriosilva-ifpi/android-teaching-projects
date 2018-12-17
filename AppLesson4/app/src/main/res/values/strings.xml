@@ -4,4 +4,5 @@
     <string name="favorito">Favorito</string>
     <string name="colorir">Colorir</string>
     <string name="apagar_time">Apagar time</string>
+    <string name="title_activity_recycler_view">RecyclerViewActivity</string>
 </resources>

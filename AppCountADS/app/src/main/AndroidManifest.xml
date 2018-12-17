@@ -10,20 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".HomeActivity" />
-        <activity android:name=".LayoutLLActivity">
-
-        </activity>
+        <activity android:name=".LayoutLLActivity"></activity>
         <activity
             android:name=".SignupActivity"
             android:parentActivityName=".LayoutLLActivity" />
-        <activity android:name=".Intent4ResultActivity" >
+        <activity android:name=".Intent4ResultActivity">
+
+        </activity>
+        <activity android:name=".Intent4ResultTela2Activity" />
+        <activity android:name=".MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Intent4ResultTela2Activity"></activity>
     </application>
 
 </manifest>

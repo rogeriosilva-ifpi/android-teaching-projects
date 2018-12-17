@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rogermac.applesson4">
+    package="com.example.rogermac.hellodatabinding">
 
     <application
         android:allowBackup="true"
@@ -9,13 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InputControlsActivity" />
-        <activity android:name=".MenuActivity"></activity>
-        <activity android:name=".DialogActivity">
-        </activity>
         <activity
-            android:name=".RecyclerViewActivity"
-            android:label="@string/title_activity_recycler_view"
+            android:name=".ScrollingActivity"
+            android:label="Android data binding.."
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
