@@ -4,4 +4,5 @@
     <string name="seu_nome">Digite seu nome aqui</string>
     <string name="seu_peso">Digite seu peso</string>
     <string name="finalizar">Finalizar</string>
+    <string name="title_activity_lista_jogos">ListaJogosActivity</string>
 </resources>

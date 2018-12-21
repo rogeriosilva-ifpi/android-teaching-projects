@@ -10,15 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".HomeActivity" />
-        <activity android:name=".LayoutLLActivity"></activity>
+        <activity android:name=".LayoutLLActivity" />
         <activity
             android:name=".SignupActivity"
             android:parentActivityName=".LayoutLLActivity" />
-        <activity android:name=".Intent4ResultActivity">
-
-        </activity>
+        <activity android:name=".Intent4ResultActivity"></activity>
         <activity android:name=".Intent4ResultTela2Activity" />
         <activity android:name=".MenuActivity">
+
+        </activity>
+        <activity
+            android:name=".ListaJogosActivity"
+            android:label="@string/title_activity_lista_jogos"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

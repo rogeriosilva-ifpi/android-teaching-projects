@@ -10,19 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".InputControlsActivity" />
-        <activity android:name=".MenuActivity"></activity>
-        <activity android:name=".DialogActivity">
-        </activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".DialogActivity"></activity>
         <activity
             android:name=".RecyclerViewActivity"
             android:label="@string/title_activity_recycler_view"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".ListaProdutosActivity"
+            android:label="Lista de Produtos">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
