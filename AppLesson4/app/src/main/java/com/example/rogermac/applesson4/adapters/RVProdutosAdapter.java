@@ -1,6 +1,5 @@
 package com.example.rogermac.applesson4.adapters;
 
-import android.animation.LayoutTransition;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.rogermac.applesson4.R;
+import com.example.rogermac.applesson4.modelos.Produto;
 
 import java.util.List;
 

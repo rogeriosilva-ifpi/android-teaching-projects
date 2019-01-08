@@ -1,4 +1,4 @@
-package com.example.rogermac.applesson4.adapters;
+package com.example.rogermac.applesson4.modelos;
 
 public class Produto {
 
