@@ -15,10 +15,12 @@ public class RVObjetosAdapter extends RecyclerView.Adapter<RVObjetosAdapter.Prod
     private Context context;
     private List<Objeto> objetos;
 
+    // Construtor
     public RVObjetosAdapter(Context context, List<Objeto> objetos) {
         this.context = context;
         this.objetos = objetos;
     }
+
 
     @NonNull
     @Override
@@ -38,6 +40,7 @@ public class RVObjetosAdapter extends RecyclerView.Adapter<RVObjetosAdapter.Prod
 
         produtoViewHolder.txtNome.setText(objeto.getNome());
         produtoViewHolder.txtId.setText(""+objeto.getId());
+        produtoViewHolder.txtTipo.setText(objeto.getTipo());
 
     }
 
@@ -46,15 +49,19 @@ public class RVObjetosAdapter extends RecyclerView.Adapter<RVObjetosAdapter.Prod
         return this.objetos.size();
     }
 
+
+
+    // Representa uma linha na listagem
     class ProdutoViewHolder extends RecyclerView.ViewHolder{
 
-        TextView txtNome, txtId;
+        TextView txtNome, txtId, txtTipo;
 
         public ProdutoViewHolder(@NonNull View itemView) {
             super(itemView);
 
             txtNome = itemView.findViewById(R.id.txt_nome);
             txtId = itemView.findViewById(R.id.txt_id);
+            txtTipo = itemView.findViewById(R.id.txt_tipo);
         }
     }
 }
