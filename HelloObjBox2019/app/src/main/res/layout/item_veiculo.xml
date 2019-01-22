@@ -4,9 +4,12 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="6dp"
-    app:cardCornerRadius="4dp"
-    android:layout_marginBottom="6dp"
-    android:backgroundTint="#00e1ff"
+    app:cardCornerRadius="8dp"
+    android:layout_marginBottom="8dp"
+    android:backgroundTint="@color/md_blue_300"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+
     >
 
     <LinearLayout
@@ -19,17 +22,27 @@
             android:id="@+id/txt_veiculo_nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="5"
             android:text="TextView"
             android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_veiculo_montadora_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="TextView"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txt_veiculo_ano"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:text="TextView" />
+
     </LinearLayout>
 
 </android.support.v7.widget.CardView>
