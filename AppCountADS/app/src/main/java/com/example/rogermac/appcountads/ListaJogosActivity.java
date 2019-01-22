@@ -10,14 +10,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.rogermac.appcountads.adapters.JogosAdapter;
+import com.example.rogermac.appcountads.dal.App;
 import com.example.rogermac.appcountads.models.Jogo;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import io.objectbox.Box;
+
 public class ListaJogosActivity extends AppCompatActivity {
 
     RecyclerView rvJogos;
+
+    // objectbox
+    Box<Jogo> boxJogos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,30 +41,32 @@ public class ListaJogosActivity extends AppCompatActivity {
             }
         });
 
+        // inicializar box de jogos
+        boxJogos = ((App)getApplication()).getBoxStore().boxFor(Jogo.class);
+
+        // povoar bd - comentar a linha apos primeira execução
+        //addJogos();
+
         // COnfiurando a RecyclerVIew
 
         rvJogos = findViewById(R.id.rv_jogos);
 
-        JogosAdapter adapter = new JogosAdapter(getJogos(), this);
+        JogosAdapter adapter = new JogosAdapter(boxJogos.getAll(), this);
         rvJogos.setAdapter(adapter);
 
         rvJogos.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public List<Jogo> getJogos(){
+    public void addJogos(){
 
-        List<Jogo> jogos = new ArrayList<>();
+        boxJogos.put(new Jogo("FIFA ", 2000, 256));
+        boxJogos.put(new Jogo("POKEMON", 1997, 135));
+        boxJogos.put(new Jogo("GTA V", 2015, 350));
+        boxJogos.put(new Jogo("FIFA", 2000, 256));
+        boxJogos.put(new Jogo("POKEMON", 1997, 135));
+        boxJogos.put(new Jogo("GTA V", 2015, 350));
 
-        for (int i = 0; i < 10000; i++){
-            jogos.add(new Jogo("FIFA", 2000, 256));
-            jogos.add(new Jogo("POKEMON", 1997, 135));
-            jogos.add(new Jogo("GTA V", 2015, 350));
-            jogos.add(new Jogo("FIFA", 2000, 256));
-            jogos.add(new Jogo("POKEMON", 1997, 135));
-            jogos.add(new Jogo("GTA V", 2015, 350));
-        }
-
-        return jogos;
     }
+
 
 }

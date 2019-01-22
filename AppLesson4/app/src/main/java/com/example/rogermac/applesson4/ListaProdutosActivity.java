@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.rogermac.applesson4.adapters.Produto;
+import com.example.rogermac.applesson4.modelos.Produto;
 import com.example.rogermac.applesson4.adapters.RVProdutosAdapter;
 
 import java.util.ArrayList;
