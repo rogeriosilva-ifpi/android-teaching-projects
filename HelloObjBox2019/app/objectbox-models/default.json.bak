@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:4334327974331906786",
-      "lastPropertyId": "6:3322717525179866395",
+      "lastPropertyId": "5:3552285669144178769",
       "name": "Veiculo",
       "properties": [
         {
@@ -27,38 +27,13 @@
         {
           "id": "5:3552285669144178769",
           "name": "placa"
-        },
-        {
-          "id": "6:3322717525179866395",
-          "indexId": "1:7914268401729435852",
-          "name": "montadoraId"
-        }
-      ],
-      "relations": []
-    },
-    {
-      "id": "2:322680980667746462",
-      "lastPropertyId": "3:5006893971206190735",
-      "name": "Montadora",
-      "properties": [
-        {
-          "id": "1:7187810848564567670",
-          "name": "id"
-        },
-        {
-          "id": "2:7698420173548150188",
-          "name": "nome"
-        },
-        {
-          "id": "3:5006893971206190735",
-          "name": "pais"
         }
       ],
       "relations": []
     }
   ],
-  "lastEntityId": "2:322680980667746462",
-  "lastIndexId": "1:7914268401729435852",
+  "lastEntityId": "1:4334327974331906786",
+  "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
   "modelVersion": 4,

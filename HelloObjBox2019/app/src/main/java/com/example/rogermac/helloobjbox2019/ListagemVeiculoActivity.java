@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.rogermac.helloobjbox2019.adapters.RVVeiculosAdapter;
 import com.example.rogermac.helloobjbox2019.modelos.Veiculo;
@@ -14,6 +13,12 @@ import com.example.rogermac.helloobjbox2019.modelos.Veiculo;
 import io.objectbox.Box;
 
 public class ListagemVeiculoActivity extends AppCompatActivity {
+
+    public static final String ACTION = "action";
+
+    public enum ACTION_TYPE {
+        NOVO, EDITAR
+    }
 
     Box<Veiculo> boxVeiculo;
     RecyclerView rvVeiculos;
@@ -25,7 +30,6 @@ public class ListagemVeiculoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listagem_veiculo);
 
         boxVeiculo = ((App)getApplication()).getBoxStore().boxFor(Veiculo.class);
-
 
     }
 
@@ -50,6 +54,7 @@ public class ListagemVeiculoActivity extends AppCompatActivity {
     public void novoVeiculo(View view) {
 
         final Intent intent = new Intent(this, FormularioVeiculoActivity.class);
+        intent.putExtra(ACTION, ACTION_TYPE.NOVO);
         startActivity(intent);
 
     }
