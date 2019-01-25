@@ -14,8 +14,9 @@ import io.objectbox.BoxStore;
 
 public class FormularioFilmeActivity extends AppCompatActivity {
 
-    private EditText editFilmeNome;
+    private EditText editFilmeNome, editFilmeGenero, editFilmeAno;
     private Box<Filme> boxFilme;
+    Filme filme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,19 +25,39 @@ public class FormularioFilmeActivity extends AppCompatActivity {
 
         //binding
         editFilmeNome = findViewById(R.id.edit_filme_nome);
+        editFilmeGenero = findViewById(R.id.edit_filme_genero);
+        editFilmeAno = findViewById(R.id.edit_filme_ano);
 
         BoxStore store = ((App)getApplication()).getBoxStore();
 
         boxFilme = store.boxFor(Filme.class);
+
+        // Verificar se edicao ou se eh novo
+        long id = getIntent().getLongExtra("filme_id", -1);
+
+        if (id == -1){
+            // Novo Filme
+            filme = new Filme();
+        }else {
+            // Editando
+            filme = boxFilme.get(id);
+            editFilmeNome.setText(filme.getNome());
+            editFilmeGenero.setText(filme.getGenero());
+            editFilmeAno.setText(filme.getAno()+"");
+        }
 
     }
 
     public void salvarFilme(View view) {
 
         String nome = editFilmeNome.getText().toString();
+        String genero = editFilmeGenero.getText().toString();
+        int ano = Integer.parseInt(editFilmeAno.getText().toString());
 
-        Filme filme = new Filme();
+
         filme.setNome(nome);
+        filme.setGenero(genero);
+        filme.setAno(ano);
 
         boxFilme.put(filme);
 
