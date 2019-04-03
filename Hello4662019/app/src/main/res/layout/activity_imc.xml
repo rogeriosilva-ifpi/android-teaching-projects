@@ -8,16 +8,17 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="337dp"
-        android:layout_height="218dp"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:onClick="abrirContador"
+        app:layout_constraintDimensionRatio="w,16:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/saude"
-        android:onClick="abrirContador"/>
+        app:srcCompat="@drawable/saude" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -90,4 +91,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_imc" />
+
+
 </android.support.constraint.ConstraintLayout>

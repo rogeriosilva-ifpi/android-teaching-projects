@@ -38,6 +38,12 @@ public class IMCActivity extends AppCompatActivity {
             btnIMC.setText("CALCULAR MEU IMC");
         }else{
 
+            if ((editAltura.getText().toString().equalsIgnoreCase("")) ||
+                    (editPeso.getText().toString().equalsIgnoreCase(""))){
+                Toast.makeText(this, "Digite Peso e Altura", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             double altura = Double.parseDouble(editAltura.getText().toString());
             double peso = Double.parseDouble(editPeso.getText().toString());
 
