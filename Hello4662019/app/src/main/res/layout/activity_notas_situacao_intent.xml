@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".NotasSituacaoIntentActivity">
 
@@ -28,6 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Finalizar"
-        android:onClick="finalizar"/>
+        android:onClick="finalizar"
+        android:text="Finalizar" />
 </LinearLayout>

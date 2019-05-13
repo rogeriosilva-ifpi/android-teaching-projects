@@ -23,7 +23,7 @@ public class App extends Application {
             new AndroidObjectBrowser(boxStore).start(this);
         }
 
-        Log.d("App", "Using ObjectBox " + BoxStore.getVersion() + " (" + BoxStore.getVersionNative() + ")");
+        //Log.d("App", "Using ObjectBox " + BoxStore.getVersion() + " (" + BoxStore.getVersionNative() + ")");
     }
 
     public BoxStore getBoxStore() {

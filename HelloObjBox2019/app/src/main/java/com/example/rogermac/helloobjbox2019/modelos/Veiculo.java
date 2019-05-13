@@ -1,11 +1,15 @@
 package com.example.rogermac.helloobjbox2019.modelos;
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
+import android.databinding.Observable;
+
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
 import io.objectbox.relation.ToOne;
 
 @Entity
-public class Veiculo {
+public class Veiculo extends BaseObservable {
 
     @Id
     long id;
@@ -17,7 +21,7 @@ public class Veiculo {
 
     private ToOne<Montadora> montadora;
 
-    Veiculo() {}
+    public Veiculo() {}
 
     public Veiculo(String nome, int ano) {
         this.nome = nome;
@@ -56,6 +60,19 @@ public class Veiculo {
         this.ano = ano;
     }
 
+    public void setAnoString(String ano){
+        try{
+            this.setAno(Integer.parseInt(ano));
+        }catch (NumberFormatException e){
+            this.setAno(0);
+        }
+    }
+
+    @Bindable
+    public String getAnoString(){
+        return String.valueOf(this.getAno());
+    }
+
     public void setPlaca(String placa) {
         this.placa = placa;
     }
@@ -69,5 +86,9 @@ public class Veiculo {
         return "Veiculo{" +
                 "nome='" + nome + '\'' +
                 '}';
+    }
+
+    public void setMontadora(Montadora montadoraSelecionada) {
+        this.getMontadora().setTarget(montadoraSelecionada);
     }
 }

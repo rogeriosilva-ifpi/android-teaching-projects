@@ -1,6 +1,8 @@
 package com.example.rogermac.helloobjbox2019;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+import com.example.rogermac.helloobjbox2019.databinding.ActivityFormularioVeiculoBinding;
 
 import com.example.rogermac.helloobjbox2019.modelos.Montadora;
 import com.example.rogermac.helloobjbox2019.modelos.Veiculo;
@@ -23,22 +26,20 @@ import static com.example.rogermac.helloobjbox2019.ListagemVeiculoActivity.*;
 
 public class FormularioVeiculoActivity extends AppCompatActivity {
 
-    private EditText editVeiculoNome, editVeiculoAno;
     private Spinner spMontadora;
 
     private Box<Veiculo> boxVeiculo;
     private Box<Montadora> boxMontadora;
     BoxStore store;
 
-    Montadora montadoraSelecionada;
-    Veiculo veiculo;
-    Intent intent;
     ACTION_TYPE actionType;
+    ActivityFormularioVeiculoBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_formulario_veiculo);
+        //setContentView(R.layout.activity_formulario_veiculo);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_formulario_veiculo);
 
         store = ((App)getApplication()).getBoxStore();
 
@@ -47,19 +48,15 @@ public class FormularioVeiculoActivity extends AppCompatActivity {
 
         //povoarMontadora();
 
-        intent = getIntent();
-        actionType = (ACTION_TYPE) intent.getExtras().get(ACTION);
+        actionType = (ACTION_TYPE) getIntent().getExtras().get(ACTION);
 
         setupUi();
-
 
     }
 
     private void setupUi() {
 
         // binding
-        editVeiculoNome = findViewById(R.id.txt_veiculo_nome);
-        editVeiculoAno = findViewById(R.id.txt_veiculo_ano);
         spMontadora = findViewById(R.id.sp_montadoras);
 
         final List<Montadora> montadoras = boxMontadora.getAll();
@@ -72,7 +69,8 @@ public class FormularioVeiculoActivity extends AppCompatActivity {
         spMontadora.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-                montadoraSelecionada = (Montadora) adapterView.getItemAtPosition(position);
+                Montadora montadoraSelecionada = (Montadora) adapterView.getItemAtPosition(position);
+                binding.getVeiculo().setMontadora(montadoraSelecionada);
             }
 
             @Override
@@ -81,21 +79,20 @@ public class FormularioVeiculoActivity extends AppCompatActivity {
             }
         });
 
-
         // Check if is NOVO or EDICAO
         switch (actionType){
             case NOVO:
                 // TODO
                 getSupportActionBar().setTitle("Novo Veículo");
+                binding.setVeiculo(new Veiculo());
                 break;
             case EDITAR:
                 // TODO: Preencher formulário
                 getSupportActionBar().setTitle("Editando Veiculo");
-                veiculo = boxVeiculo.get(intent.getLongExtra("veiculo_id", -1));
-                editVeiculoNome.setText(veiculo.getNome());
-                editVeiculoAno.setText(""+ veiculo.getAno());
+                binding.setVeiculo(boxVeiculo.get(getIntent().getLongExtra("veiculo_id", -1)));
+
                 // Selecionar montadora
-                spMontadora.setSelection(adapter.getPosition(veiculo.getMontadora().getTarget()));
+                spMontadora.setSelection(adapter.getPosition(binding.getVeiculo().getMontadora().getTarget()));
 
                 break;
             default:
@@ -104,26 +101,12 @@ public class FormularioVeiculoActivity extends AppCompatActivity {
                 break;
         }
 
-
     }
 
     public void salvarVeiculo(View view) {
 
-        String nome = editVeiculoNome.getText().toString();
-        int ano = Integer.parseInt(editVeiculoAno.getText().toString());
-
-        if (actionType == ACTION_TYPE.NOVO)
-            veiculo = new Veiculo(nome, ano);
-        else{
-            veiculo.setNome(nome);
-            veiculo.setAno(ano);
-        }
-        veiculo.getMontadora().setTarget(montadoraSelecionada);
-
-        boxVeiculo.put(veiculo);
-
+        boxVeiculo.put(binding.getVeiculo());
         Toast.makeText(this, "Veiculo Salvo!", Toast.LENGTH_SHORT).show();
-
         finish();
 
     }
