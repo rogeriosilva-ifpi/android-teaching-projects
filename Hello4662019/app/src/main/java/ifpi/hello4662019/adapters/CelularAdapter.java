@@ -1,8 +1,10 @@
 package ifpi.hello4662019.adapters;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,7 +67,8 @@ public class CelularAdapter
     }
 
     // View Holder
-    class CelularViewHolder extends RecyclerView.ViewHolder {
+    class CelularViewHolder
+            extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 
         TextView txtCelularMarca, txtCelularModelo, txtCelularValor;
 
@@ -77,8 +80,44 @@ public class CelularAdapter
             txtCelularMarca = itemView.findViewById(R.id.txt_celular_marca);
             txtCelularModelo = itemView.findViewById(R.id.txt_celular_modelo);
             txtCelularValor = itemView.findViewById(R.id.txt_celular_valor);
+
+            itemView.setOnClickListener(this);
+            itemView.setOnLongClickListener(this);
+
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Snackbar.make(v, "Clicou", Snackbar.LENGTH_LONG).show();
+//                }
+//            });
         }
 
+
+
+        @Override
+        public void onClick(View v) {
+            int posicao = getAdapterPosition();
+            Celular celular = celulares.get(posicao);
+            //Snackbar.make(v, "Clicou no: " + celular.getModelo(), Snackbar.LENGTH_LONG).show();
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+            builder.setTitle("Seleção de Celular");
+            builder.setMessage("Você clicou em " + celular.getModelo());
+            builder.setPositiveButton("Ok", null);
+            builder.setNegativeButton("CANCELAR", null);
+            builder.setNeutralButton("NADA", null);
+
+            builder.create().show();
+        }
+
+        @Override
+        public boolean onLongClick(View v) {
+            int posicao = getAdapterPosition();
+            Celular celular = celulares.get(posicao);
+            Snackbar.make(v, "Clicou no: " + celular.getModelo(), Snackbar.LENGTH_LONG).show();
+            return true;
+        }
     }
 }
 

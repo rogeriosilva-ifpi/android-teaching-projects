@@ -11,20 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListaCelularActivity"
-            android:label="Lista de Celulares">
+        <activity android:name=".ListaComidasActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RadioAndCheckActivity">
+        <activity
+            android:name=".ListaCelularActivity"
+            android:label="Lista de Celulares">
         </activity>
+        <activity android:name=".RadioAndCheckActivity"></activity>
         <activity
             android:name=".CicloVida2Activity"
             android:parentActivityName=".CicloVida1Activity" />
-        <activity android:name=".CicloVida1Activity"></activity>
+        <activity android:name=".CicloVida1Activity" />
         <activity android:name=".ImplicitIntentSetAlarmActivity" />
         <activity android:name=".Tela2IntentResultActivity" />
         <activity android:name=".Tela1IntentResultActivity" />
