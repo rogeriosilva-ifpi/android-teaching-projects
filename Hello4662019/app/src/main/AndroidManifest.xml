@@ -11,18 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListaComidasActivity">
+        <activity android:name=".DetalheAnuncioActivity" android:label="Detalhes do Anúncio" android:parentActivityName=".ListagemAnunciosActivity"></activity>
+        <activity
+            android:name=".ListagemAnunciosActivity"
+            android:label="Anúncios...">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ListaComidasActivity" />
         <activity
             android:name=".ListaCelularActivity"
-            android:label="Lista de Celulares">
-        </activity>
-        <activity android:name=".RadioAndCheckActivity"></activity>
+            android:label="Lista de Celulares" />
+        <activity android:name=".RadioAndCheckActivity" />
         <activity
             android:name=".CicloVida2Activity"
             android:parentActivityName=".CicloVida1Activity" />

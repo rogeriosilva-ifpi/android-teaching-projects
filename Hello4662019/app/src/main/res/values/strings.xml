@@ -8,5 +8,6 @@
         <item>Donatello</item>
         <item>Raphael</item>
     </string-array>
+    <string name="title_activity_detalhe_anuncio">DetalheAnuncioActivity</string>
 
 </resources>
