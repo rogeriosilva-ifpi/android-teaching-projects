@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "558994171677",
+    "firebase_url": "https://olx4662019rogerio.firebaseio.com",
+    "project_id": "olx4662019rogerio",
+    "storage_bucket": "olx4662019rogerio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558994171677:android:41479a458212bca7",
+        "android_client_info": {
+          "package_name": "ifpi.hello4662019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558994171677-1bn50u9nbju2n8odqnoitu2vko7ctrp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG7Rp00k_2mLL2IDhA0Saz8h83XK8a-as"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "558994171677-1bn50u9nbju2n8odqnoitu2vko7ctrp3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
